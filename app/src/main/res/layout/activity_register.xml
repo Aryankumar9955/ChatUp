@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_setusername"
+    tools:context=".Register">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="310dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_shadow"
+        android:gravity="center"
+        android:textColorHint="#2196F3"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#2196F3"
+        app:boxStrokeWidth="3dp"
+        app:helperTextTextColor="#2196F3"
+        app:hintEnabled="true"
+        app:hintTextColor="#2196F3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/getCountryCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:padding="0dp"
+            app:ccpDialog_backgroundColor="@color/material_dynamic_neutral20"
+            app:ccpDialog_textColor="#FFFFFF"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_contentColor="#FFFFFF"
+            app:ccp_defaultNameCode="IND"
+            app:ccp_showFlag="true"
+            app:ccp_showFullName="true"
+            app:ccp_showNameCode="true"></com.hbb20.CountryCodePicker>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/verify"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/button_shadow"
+        android:backgroundTintMode="add"
+        android:hapticFeedbackEnabled="true"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
+
+    <TextView
+        android:id="@+id/verifyText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="20dp"
+        android:drawableEnd="@drawable/baseline_arrow_forward_24"
+        android:fontFamily="@font/allerta"
+        android:gravity="center"
+        android:text="Get OTP"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/verify"
+        app:layout_constraintEnd_toEndOf="@+id/verify"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/verify"
+        app:layout_constraintTop_toTopOf="@+id/verify"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout5"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColorHint="#292A2B"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxStrokeColor="#1B1C1C"
+        app:boxStrokeWidth="3dp"
+        app:helperTextTextColor="#FFFFFF"
+        app:hintEnabled="true"
+        app:hintTextColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:startIconDrawable="@drawable/baseline_local_phone_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/getOTP"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/allerta"
+            android:gravity="center|left"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:shadowColor="#161717"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#B3B2B2" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/allerta"
+        android:text="Welcome!"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

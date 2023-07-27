@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/black_button"
+    tools:context=".OTPauth">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/allerta"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Enter the 6 digit OTP received on your mobile number."
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/verify"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_shadow"
+        android:backgroundTintMode="add"
+        android:hapticFeedbackEnabled="true"
+        app:layout_constraintEnd_toEndOf="@id/textInputLayout5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/textInputLayout5"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout5" />
+
+    <TextView
+        android:id="@+id/verifyText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:drawableRight="@drawable/baseline_arrow_forward_24"
+        android:fontFamily="@font/allerta"
+        android:gravity="center"
+        android:text="Verify"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/verify"
+        app:layout_constraintEnd_toEndOf="@+id/verify"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/verify"
+        app:layout_constraintTop_toTopOf="@+id/verify" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout5"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:textColorHint="#FBFBFB"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeColor="#48494A"
+        app:boxStrokeWidth="3dp"
+        app:helperTextTextColor="#FDFDFD"
+        app:hintEnabled="true"
+        app:hintTextColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:startIconDrawable="@drawable/baseline_lock_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/getOTP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/allerta"
+            android:gravity="center|left"
+            android:hint="Enter OTP"
+            android:inputType="phone"
+            android:shadowColor="#2196F3"
+            android:textColor="#2196F3"
+            android:textColorHint="#2196F3" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chatItemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/black_button_round"
+    android:layout_marginBottom="2dp"
+    android:outlineAmbientShadowColor="#000000">
+
+    <TextView
+        android:id="@+id/usernameChatRecycler"
+        android:layout_width="170dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:shadowColor="#1B2660"
+        android:shadowDx="1"
+        android:shadowDy="5"
+        android:shadowRadius="10"
+        android:text="Ayush Anand"
+        android:textColor="#FDFDFD"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/userImageChatRecycler"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    <ImageView
+
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+        -->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userImageChatRecycler"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/baseline_person_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/messageFromUser"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/allerta"
+        android:shadowColor="#050505"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="10"
+        android:text="very kul"
+        android:textAlignment="viewStart"
+        android:textColor="#959292"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/usernameChatRecycler"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/userImageChatRecycler"
+        app:layout_constraintTop_toBottomOf="@+id/usernameChatRecycler" />
+
+    <TextView
+        android:id="@+id/chatDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/abel"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="Date"
+        android:textColor="#FAF7F7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

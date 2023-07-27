@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_setusername"
+    tools:context=".SetUsername">
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="245dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/button_shadow"
+        android:drawableRight="@drawable/baseline_person_red_24"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="text"
+        android:textColor="#B8BABC"
+        android:textColorHint="#919191"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/about"
+        android:layout_width="245dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="380dp"
+        android:background="@drawable/button_shadow"
+        android:drawableRight="@drawable/baseline_description_24"
+        android:ems="10"
+        android:hint="About you"
+        android:inputType="text"
+        android:textColor="#B8BABC"
+        android:textColorHint="#919191"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="100dp"
+        android:foregroundGravity="center"
+        android:src="@drawable/baseline_person_24"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"></de.hdodenhof.circleimageview.CircleImageView>
+
+    <ImageButton
+        android:id="@+id/gotoMain"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/black_button_round"
+        app:layout_constraintEnd_toEndOf="@+id/about"
+        app:layout_constraintStart_toStartOf="@+id/about"
+        app:layout_constraintTop_toBottomOf="@+id/about" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="20dp"
+        android:drawableEnd="@drawable/baseline_arrow_forward_24"
+        android:fontFamily="@font/allerta"
+        android:gravity="center"
+        android:text="Set username"
+        android:textColor="#D3CFCF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/gotoMain"
+        app:layout_constraintEnd_toEndOf="@+id/gotoMain"
+        app:layout_constraintStart_toStartOf="@+id/gotoMain"
+        app:layout_constraintTop_toTopOf="@+id/gotoMain" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-6dp"
+        android:layout_marginBottom="-6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/userImage"
+        app:layout_constraintEnd_toEndOf="@+id/userImage"
+        app:srcCompat="@drawable/baseline_camera_alt_24" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/abel"
+        android:text="Set display photo"
+        android:textColor="#232222"
+        app:layout_constraintBottom_toTopOf="@+id/userImage"
+        app:layout_constraintEnd_toEndOf="@+id/userImage"
+        app:layout_constraintStart_toStartOf="@+id/userImage" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressTint="#4CAF50"
+        app:layout_constraintBottom_toBottomOf="@+id/userImage"
+        app:layout_constraintEnd_toEndOf="@+id/userImage"
+        app:layout_constraintStart_toStartOf="@+id/userImage"
+        app:layout_constraintTop_toTopOf="@+id/userImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

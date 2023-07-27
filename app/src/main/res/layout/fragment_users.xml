@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.UsersFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarFadeDuration="@integer/material_motion_duration_long_1"
+        android:scrollbarSize="@dimen/fastscroll__handle_inset"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical" />
+
+    <ImageButton
+        android:id="@+id/refresh"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_shadow"
+        android:src="@drawable/baseline_refresh_24" />
+
+
+</FrameLayout>

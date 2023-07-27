@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient_main"
+    tools:context=".Fragments.ProfileFragment">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/baseline_person_24"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <ImageButton
+        android:id="@+id/pickProfileImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/baseline_camera_alt_24"
+        app:layout_constraintStart_toEndOf="@+id/profileImage"
+        app:layout_constraintTop_toTopOf="@+id/profileImage" />
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_weight="0.3"
+        android:fontFamily="@font/allerta"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="5"
+        android:text="Username"
+        android:textColor="#E1E1E3"
+        android:textColorHighlight="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/profileImage"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/profileImage"
+        app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.1"
+        android:background="@drawable/black_button"
+        android:fontFamily="@font/allerta"
+        android:gravity="left"
+        android:padding="5dp"
+        android:shadowColor="@color/black"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="5"
+        android:text="Contact number"
+        android:textColor="#E1E1E3"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileStatus" />
+
+    <TextView
+        android:id="@+id/profilePhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/black_button"
+        android:fontFamily="@font/abel"
+        android:gravity="left"
+        android:padding="5dp"
+        android:shadowColor="@color/black"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="5"
+        android:text="+919955886464"
+        android:textAllCaps="false"
+        android:textColor="#E1E1E3"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/profileDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/allerta"
+        android:paddingLeft="5dp"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="Delete Account"
+        android:textAllCaps="false"
+        android:textColor="#D8D4D4"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilePhone" />
+
+    <ImageButton
+        android:id="@+id/signOut"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/baseline_logout_24"
+        android:elevation="5dp"
+        android:textAlignment="center"
+        android:tooltipText="sign out"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signOut"
+        android:layout_alignStart="@+id/signOut"
+        android:layout_alignEnd="@+id/signOut"
+        android:layout_marginStart="-1dp"
+        android:elevation="5dp"
+        android:fontFamily="@font/abel"
+        android:text="Sign out"
+        android:textColor="#E91E63"
+        app:layout_constraintEnd_toEndOf="@+id/signOut"
+        app:layout_constraintStart_toStartOf="@+id/signOut"
+        app:layout_constraintTop_toBottomOf="@+id/signOut" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressTint="#609F49"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/profileImage"
+        app:layout_constraintEnd_toEndOf="@+id/profileImage"
+        app:layout_constraintStart_toStartOf="@+id/profileImage"
+        app:layout_constraintTop_toTopOf="@+id/profileImage" />
+
+    <EditText
+        android:id="@+id/profileStatus"
+        style="@style/Widget.Material3.AutoCompleteTextView.FilledBox.Dense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_shadow"
+        android:drawableRight="@drawable/baseline_edit_24"
+        android:ems="10"
+        android:fontFamily="@font/abel"
+        android:gravity="top"
+        android:keyboardNavigationCluster="true"
+        android:shadowColor="#151515"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="about"
+        android:textColor="#EAE8E8"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/profileName"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/profileName"
+        app:layout_constraintTop_toBottomOf="@+id/profileName" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:alpha="0.6"
+        android:src="@drawable/button_shadow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
